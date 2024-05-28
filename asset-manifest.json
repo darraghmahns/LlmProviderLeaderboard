@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/LlmProviderLeaderboard/static/css/main.430b88c1.css",
+    "main.js": "/LlmProviderLeaderboard/static/js/main.cf91783b.js",
+    "static/js/453.f1e57289.chunk.js": "/LlmProviderLeaderboard/static/js/453.f1e57289.chunk.js",
+    "index.html": "/LlmProviderLeaderboard/index.html",
+    "main.430b88c1.css.map": "/LlmProviderLeaderboard/static/css/main.430b88c1.css.map",
+    "main.cf91783b.js.map": "/LlmProviderLeaderboard/static/js/main.cf91783b.js.map",
+    "453.f1e57289.chunk.js.map": "/LlmProviderLeaderboard/static/js/453.f1e57289.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.430b88c1.css",
+    "static/js/main.cf91783b.js"
+  ]
+}
