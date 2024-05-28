@@ -1,0 +1,173 @@
+const metricsData = [
+    {
+      id: "cost_in",
+      title: "Cost In",
+      metric: "$/M",
+      description: "\"Cost In\" refers to the expenditure incurred by a company to utilize a particular service or resource. This metric includes the initial investment and ongoing costs required to maintain and operate the service. In the context of cloud services, it typically encompasses subscription fees, licensing costs, and any additional expenses related to the consumption of resources.",
+      data: [
+        { provider: "DEEPINFRA (mixtral-8x7b)", value: 0.27 },
+        { provider: "ABACUS (mixtral-8x7b)", value: 0.3 },
+        { provider: "ANYSCALE (mixtral-8x7b)", value: 0.5 },
+        { provider: "FIREWORKS (mixtral-8x7b)", value: 0.5 },
+        { provider: "LEPTON (mixtral-8x7b)", value: 0.5 },
+        { provider: "PERPLEXITY (mixtral-8x7b)", value: 0.6 },
+        { provider: "TOGETHER (mixtral-8x7b)", value: 0.6 },
+        { provider: "DEEPINFRA (Llama2-70b)", value: 0.7 },
+        { provider: "ANTHROPIC (Claude Instant 1.2)", value: 0.8 },
+        { provider: "FIREWORKS (Llama2-70b)", value: 0.9 },
+        { provider: "TOGETHER (Llama2-70b)", value: 0.9 },
+        { provider: "ANYSCALE (Llama2-70b)", value: 1.0 },
+        { provider: "OPENAI (GPT-3.5 Turbo)", value: 1.0 },
+        { provider: "ANTHROPIC (Claude 2.1)", value: 8.0 },
+        { provider: "OPENAI (GPT-4 Turbo)", value: 10.0 },
+        { provider: "OPENAI (GPT-4)", value: 30.0 }
+      ]
+    },
+    {
+      id: "cost_out",
+      title: "Cost Out",
+      metric: "$/M",
+      description: "\"Cost Out\" represents the pricing or charges that a company sets for its customers to use its services. This metric is crucial for understanding the revenue model and profitability of the service. For cloud services, it often includes usage fees, data transfer costs, and other charges that customers incur while using the service.",
+      data: [
+        { provider: "DEEPINFRA (mixtral-8x7b)", value: 0.27 },
+        { provider: "ABACUS (mixtral-8x7b)", value: 1.0 },
+        { provider: "ANYSCALE (mixtral-8x7b)", value: 0.5 },
+        { provider: "FIREWORKS (mixtral-8x7b)", value: 0.5 },
+        { provider: "LEPTON (mixtral-8x7b)", value: 0.5 },
+        { provider: "PERPLEXITY (mixtral-8x7b)", value: 0.6 },
+        { provider: "TOGETHER (mixtral-8x7b)", value: 0.6 },
+        { provider: "DEEPINFRA (Llama2-70b)", value: 0.9 },
+        { provider: "ANTHROPIC (Claude Instant 1.2)", value: 2.4 },
+        { provider: "FIREWORKS (Llama2-70b)", value: 0.9 },
+        { provider: "TOGETHER (Llama2-70b)", value: 0.9 },
+        { provider: "ANYSCALE (Llama2-70b)", value: 1.0 },
+        { provider: "OPENAI (GPT-3.5 Turbo)", value: 2.0 },
+        { provider: "ANTHROPIC (Claude 2.1)", value: 24.0 },
+        { provider: "OPENAI (GPT-4 Turbo)", value: 30.0 },
+        { provider: "OPENAI (GPT-4)", value: 60.0 }
+      ]
+    },
+    {
+      id: "rate_limit",
+      title: "Rate Limit",
+      metric: "RPM or RPS",
+      description: "\"Rate Limit\" refers to the maximum number of requests or transactions that a service can handle within a specified time period. This metric is essential for ensuring the stability and performance of the service, preventing abuse, and managing traffic effectively. In APIs and web services, rate limits are often implemented to control the load on servers and ensure fair usage among users.",
+      data: [
+        { provider: "DEEPINFRA (mixtral-8x7b)", value: "Unlimited" },
+        { provider: "ABACUS (mixtral-8x7b)", value: 20 },
+        { provider: "ANYSCALE (mixtral-8x7b)", value: 30 },
+        { provider: "FIREWORKS (mixtral-8x7b)", value: 600 },
+        { provider: "LEPTON (mixtral-8x7b)", value: 10 },
+        { provider: "PERPLEXITY (mixtral-8x7b)", value: 24 },
+        { provider: "TOGETHER (mixtral-8x7b)", value: 100 },
+        { provider: "DEEPINFRA (Llama2-70b)", value: "Unlimited" },
+        { provider: "ANTHROPIC (Claude Instant 1.2)", value: "Customized" },
+        { provider: "FIREWORKS (Llama2-70b)", value: 600 },
+        { provider: "TOGETHER (Llama2-70b)", value: 100 },
+        { provider: "ANYSCALE (Llama2-70b)", value: 30 },
+        { provider: "OPENAI (GPT-3.5 Turbo)", value: 10000 },
+        { provider: "ANTHROPIC (Claude 2.1)", value: "Customized" },
+        { provider: "OPENAI (GPT-4 Turbo)", value: 10000 },
+        { provider: "OPENAI (GPT-4)", value: 10000 }
+      ]
+    },
+    {
+      id: "throughput_p50",
+      title: "Throughput P50",
+      metric: "tks/s",
+      description: "\"Throughput P50\" (Percentile 50) measures the median rate at which data is processed or transactions are completed by the service. It indicates the typical performance level experienced by users, with 50% of the observed values falling below this point. This metric helps in assessing the efficiency and capacity of the service under normal operating conditions.",
+      data: [
+        { provider: "DEEPINFRA (mixtral-8x7b)", value: 10 },
+        { provider: "ABACUS (mixtral-8x7b)", value: 2 },
+        { provider: "ANYSCALE (mixtral-8x7b)", value: 8 },
+        { provider: "FIREWORKS (mixtral-8x7b)", value: 54 },
+        { provider: "LEPTON (mixtral-8x7b)", value: 43 },
+        { provider: "PERPLEXITY (mixtral-8x7b)", value: 6 },
+        { provider: "TOGETHER (mixtral-8x7b)", value: 20 },
+        { provider: "DEEPINFRA (Llama2-70b)", value: 8 },
+        { provider: "ANTHROPIC (Claude Instant 1.2)", value: 11 },
+        { provider: "FIREWORKS (Llama2-70b)", value: 10 },
+        { provider: "TOGETHER (Llama2-70b)", value: 7 },
+        { provider: "ANYSCALE (Llama2-70b)", value: 11 },
+        { provider: "OPENAI (GPT-3.5 Turbo)", value: 10 },
+        { provider: "ANTHROPIC (Claude 2.1)", value: 5 },
+        { provider: "OPENAI (GPT-4 Turbo)", value: 8 },
+        { provider: "OPENAI (GPT-4)", value: 7 }
+      ]
+    },
+    {
+      id: "throughput_p90",
+      title: "Throughput P90",
+      metric: "tks/s",
+      description: "\"Throughput P90\" (Percentile 90) represents the rate at which data is processed or transactions are completed by the service, with 90% of the observed values falling below this point. This metric provides insight into the performance of the service under higher loads and helps in identifying potential bottlenecks or areas for improvement.",
+      data: [
+        { provider: "DEEPINFRA (mixtral-8x7b)", value: 15 },
+        { provider: "ABACUS (mixtral-8x7b)", value: 7 },
+        { provider: "ANYSCALE (mixtral-8x7b)", value: 14 },
+        { provider: "FIREWORKS (mixtral-8x7b)", value: 88 },
+        { provider: "LEPTON (mixtral-8x7b)", value: 59 },
+        { provider: "PERPLEXITY (mixtral-8x7b)", value: 64 },
+        { provider: "TOGETHER (mixtral-8x7b)", value: 92 },
+        { provider: "DEEPINFRA (Llama2-70b)", value: 13 },
+        { provider: "ANTHROPIC (Claude Instant 1.2)", value: 47 },
+        { provider: "FIREWORKS (Llama2-70b)", value: 53 },
+        { provider: "TOGETHER (Llama2-70b)", value: 13 },
+        { provider: "ANYSCALE (Llama2-70b)", value: 33 },
+        { provider: "OPENAI (GPT-3.5 Turbo)", value: 47 },
+        { provider: "ANTHROPIC (Claude 2.1)", value: 20 },
+        { provider: "OPENAI (GPT-4 Turbo)", value: 17 },
+        { provider: "OPENAI (GPT-4)", value: 11 }
+      ]
+    },
+    {
+      id: "ttftp50",
+      title: "TTFT P50",
+      metric: "s",
+      description: "\"TTFT50\" (Time to First Transaction Percentile 50) measures the median time it takes for the first transaction to be completed after a request is made. This metric is crucial for understanding the initial responsiveness of the service and the user experience during the first interaction.",
+      data: [
+        { provider: "DEEPINFRA (mixtral-8x7b)", value: 19.18 },
+        { provider: "ABACUS (mixtral-8x7b)", value: 17.02 },
+        { provider: "ANYSCALE (mixtral-8x7b)", value: 15.86 },
+        { provider: "FIREWORKS (mixtral-8x7b)", value: 21.11 },
+        { provider: "LEPTON (mixtral-8x7b)", value: 5.05 },
+        { provider: "PERPLEXITY (mixtral-8x7b)", value: 15.44 },
+        { provider: "TOGETHER (mixtral-8x7b)", value: 18.9 },
+        { provider: "DEEPINFRA (Llama2-70b)", value: 19.06 },
+        { provider: "ANTHROPIC (Claude Instant 1.2)", value: 5.97 },
+        { provider: "FIREWORKS (Llama2-70b)", value: 21.41 },
+        { provider: "TOGETHER (Llama2-70b)", value: 18.53 },
+        { provider: "ANYSCALE (Llama2-70b)", value: 15.19 },
+        { provider: "OPENAI (GPT-3.5 Turbo)", value: 18.8 },
+        { provider: "ANTHROPIC (Claude 2.1)", value: 6.04 },
+        { provider: "OPENAI (GPT-4 Turbo)", value: 17.93 },
+        { provider: "OPENAI (GPT-4)", value: 18.49 }
+      ]
+    },
+    {
+        id: "ttftp90",
+        title: "TTFT P90",
+        metric: "s",
+        description: "\"TTFT90\" (Time to First Transaction Percentile 90) measures the time it takes for the first transaction to be completed after a request is made, with 90% of the observed values falling below this point. This metric helps in assessing the worst-case scenarios and the responsiveness of the service under high load or less optimal conditions.",
+        data: [
+          { provider: "DEEPINFRA (mixtral-8x7b)", value: 30.23 },
+          { provider: "ABACUS (mixtral-8x7b)", value: 27.84 },
+          { provider: "ANYSCALE (mixtral-8x7b)", value: 23.43 },
+          { provider: "FIREWORKS (mixtral-8x7b)", value: 28.17 },
+          { provider: "LEPTON (mixtral-8x7b)", value: 7.43 },
+          { provider: "PERPLEXITY (mixtral-8x7b)", value: 22.16 },
+          { provider: "TOGETHER (mixtral-8x7b)", value: 26.96 },
+          { provider: "DEEPINFRA (Llama2-70b)", value: 30.09 },
+          { provider: "ANTHROPIC (Claude Instant 1.2)", value: 6.49 },
+          { provider: "FIREWORKS (Llama2-70b)", value: 27.59 },
+          { provider: "TOGETHER (Llama2-70b)", value: 26.37 },
+          { provider: "ANYSCALE (Llama2-70b)", value: 20.85 },
+          { provider: "OPENAI (GPT-3.5 Turbo)", value: 26.8 },
+          { provider: "ANTHROPIC (Claude 2.1)", value: 6.49 },
+          { provider: "OPENAI (GPT-4 Turbo)", value: 25.94 },
+          { provider: "OPENAI (GPT-4)", value: 26.33 }
+        ]
+      },
+]
+
+
+export default metricsData;

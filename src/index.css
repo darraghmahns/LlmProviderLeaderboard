@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.fixed-heatmap {
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  z-index: 1;
+}
+
